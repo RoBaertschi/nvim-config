@@ -15,7 +15,10 @@ set relativenumber
 let mapleader=" "
 
 call plug#begin()
-Plug 'https://github.com/nvim-lualine/lualine.nvim'
+
+Plug 'numToStr/FTerm.nvim'
+
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'nvim-tree/nvim-tree.lua'
@@ -82,6 +85,7 @@ require'cmp'.setup {
 
 require('autocmp')
 require('formatterconfig')
+require('keybindings')
 
 require('autoclose').setup()
 require('lualine').setup {
