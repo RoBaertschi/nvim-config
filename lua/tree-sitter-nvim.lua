@@ -3,7 +3,7 @@ vim.filetype.add({
 		build = "buildfile",
 	},
 	filename = {
-		["builfile"] = "buildfile",
+		["buildfile"] = "buildfile",
 	},
 })
 

@@ -10,6 +10,8 @@ set smartcase
 set autoindent
 set cursorline
 
+set relativenumber
+
 let mapleader=" "
 
 call plug#begin()
@@ -32,6 +34,8 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 Plug 'nvimtools/none-ls.nvim'
 Plug 'jay-babu/mason-null-ls.nvim'
 Plug 'nvim-lua/plenary.nvim'
+
+Plug 'folke/neodev.nvim'
 call plug#end()
 
 colorscheme monokai_pro
@@ -56,6 +60,11 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
   client.server_capabilities.semanticTokensProvider = nil
 end)
+
+-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+require("neodev").setup({
+  -- add any options here, or leave empty to use the default settings
+})
 
 require('nvim-tree').setup()
 require('mason').setup()
