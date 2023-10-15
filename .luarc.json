@@ -1,8 +1,0 @@
-{
-    "workspace.library": [
-        "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\plugged\\neodev.nvim\\types\\nightly",
-        "C:\\Users\\rtmba\\scoop\\apps\\neovim-nightly\\0.10.0-dev-1055-gb7734c4ec\\share\\nvim\\runtime\\lua",
-        "C:/Users/rtmba/AppData/Local/nvim/lua",
-        "${3rd}/luv/library"
-    ]
-}
