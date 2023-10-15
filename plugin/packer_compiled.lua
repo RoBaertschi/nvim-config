@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
+  ["neoconf.nvim"] = {
+    loaded = true,
+    path = "/home/robin/.local/share/nvim/site/pack/packer/start/neoconf.nvim",
+    url = "https://github.com/folke/neoconf.nvim"
+  },
   ["neodev.nvim"] = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/neodev.nvim",

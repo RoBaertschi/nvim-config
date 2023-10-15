@@ -1,8 +1,8 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -17,6 +17,12 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
   -- Packer can manage itself
   use("wbthomason/packer.nvim")
+  use({
+    "folke/neoconf.nvim",
+    config = function ()
+      require("neoconf").setup({})
+    end
+  })
 
   use({
     "nvim-telescope/telescope.nvim",
@@ -51,6 +57,7 @@ return require("packer").startup(function(use)
   use {
     'm4xshen/autoclose.nvim'
   }
+
 
   use({
     "VonHeikemen/lsp-zero.nvim",
