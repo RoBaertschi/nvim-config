@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  RoPlugin = {
+    loaded = true,
+    path = "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\RoPlugin",
+    url = "C:\\Users\\rtmba\\dev\\nvim_plugins\\RoPlugin"
+  },
   ["autoclose.nvim"] = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/autoclose.nvim",

@@ -1,3 +1,4 @@
+require("neodev")
 
 require("neodev").setup()
 local lsp = require("lsp-zero")
@@ -10,8 +11,11 @@ require("mason-lspconfig").setup({
   handlers = { lsp.default_setup },
 })
 
-require("mason-null-ls").setup({ ensure_installed = { "stylua", "jq", "prettier" }, automatic_installation = true })
-
+require("mason-null-ls").setup({
+	ensure_installed = { "stylua", "jq" },
+	automatic_installation = true,
+	handlers = {},
+})
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 require("null-ls").setup({
@@ -38,14 +42,6 @@ require("cmp").setup({
     { name = "nvim_lua" },
   },
 })
-
-
-lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({ buffer = bufnr })
-  client.server_capabilities.semanticTokensProvider = nil
-end)
 
 local luasnip = require("luasnip")
 
@@ -89,6 +85,5 @@ cmp.setup({
     { name = "luasnip" },
   },
 })
-
 
 lsp.setup()

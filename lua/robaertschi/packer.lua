@@ -15,74 +15,65 @@ local packer_bootstrap = ensure_packer()
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
-  -- Packer can manage itself
-  use("wbthomason/packer.nvim")
-  use({
-    "folke/neoconf.nvim",
-    config = function ()
-      require("neoconf").setup({})
-    end
-  })
+	-- Packer can manage itself
+	use("wbthomason/packer.nvim")
 
-  use({
-    "nvim-telescope/telescope.nvim",
-    tag = "0.1.4",
-    -- or                            , branch = '0.1.x',
-    requires = { { "nvim-lua/plenary.nvim" } },
-  })
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.4",
+		-- or                            , branch = '0.1.x',
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
-  use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ "rose-pine/neovim", as = "rose-pine" })
 
-  use({ "nvim-treesitter/nvim-treesitter", as = "nvim-treesitter", { run = ":TSUpdate" } })
-  use("ThePrimeagen/harpoon")
-  use("mbbill/undotree")
-  use("tpope/vim-fugitive")
-  use("folke/neodev.nvim")
-  use("tanvirtin/monokai.nvim")
-  use { "akinsho/toggleterm.nvim", tag = "*" }
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  use { 'nvim-tree/nvim-web-devicons' }
+	use({ "nvim-treesitter/nvim-treesitter", as = "nvim-treesitter", { run = ":TSUpdate" } })
+	use("ThePrimeagen/harpoon")
+	use("mbbill/undotree")
+	use("tpope/vim-fugitive")
+	use("folke/neodev.nvim")
+	use("tanvirtin/monokai.nvim")
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
+	use({ "nvim-tree/nvim-web-devicons" })
 
-  use {
-    'nvim-tree/nvim-tree.lua',
-  }
+	use({
+		"nvim-tree/nvim-tree.lua",
+	})
 
-  use {
-    'anuvyklack/pretty-fold.nvim'
-  }
+	use({
+		"anuvyklack/pretty-fold.nvim",
+	})
 
-  use {
-    'm4xshen/autoclose.nvim'
-  }
+	use({
+		"m4xshen/autoclose.nvim",
+	})
 
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lua" },
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
+			{ "rafamadriz/friendly-snippets" },
+			-- Formatter Support
+			{ "nvimtools/none-ls.nvim" },
+			{ "jay-babu/mason-null-ls.nvim" },
+		},
+	})
 
-  use({
-    "VonHeikemen/lsp-zero.nvim",
-    requires = {
-      -- LSP Support
-      { "neovim/nvim-lspconfig" },
-      { "williamboman/mason.nvim" },
-      { "williamboman/mason-lspconfig.nvim" },
-      -- Autocompletion
-      { "hrsh7th/nvim-cmp" },
-      { "hrsh7th/cmp-buffer" },
-      { "hrsh7th/cmp-path" },
-      { "saadparwaiz1/cmp_luasnip" },
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "hrsh7th/cmp-nvim-lua" },
-      -- Snippets
-      { "L3MON4D3/LuaSnip" },
-      { "rafamadriz/friendly-snippets" },
-      -- Formatter Support
-      { "nvimtools/none-ls.nvim" },
-      { "jay-babu/mason-null-ls.nvim" }
-    },
-  })
-
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+	use({ os.getenv("HOME") .. "/dev/nvim_plugins/RoPlugin" })
 end)
