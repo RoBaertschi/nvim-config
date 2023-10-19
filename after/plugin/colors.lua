@@ -6,7 +6,7 @@ function Color(color)
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 	if vim.fn.exists("g:neovide") then
-		vim.g.neovide_transparency = 0.8
+		vim.g.neovide_transparency = 0
 		vim.o.guifont = "JetBrainsMonoNL NF"
 	end
 end
