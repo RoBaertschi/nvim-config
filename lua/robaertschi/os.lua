@@ -1,4 +1,3 @@
-
 if vim.fn.has("unix") == 1 then
 	local uname = vim.system({ "echo", "-n", '"$(uname)"' }, { text = true }):wait()
 	if uname.code == 0 and uname.stdout == "Linux" then
@@ -13,7 +12,6 @@ elseif vim.fn.has("win32") or vim.fn.has("win64") then
 else
 	vim.g.sysop = "undefined"
 end
-
 
 vim.opt.shell = vim.g.sysop == "win" and "pwsh" or "fish"
 if vim.g.sysop == "win" then

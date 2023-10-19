@@ -52,6 +52,10 @@ return require("packer").startup(function(use)
 		"m4xshen/autoclose.nvim",
 	})
 	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
+	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
 			-- LSP Support
