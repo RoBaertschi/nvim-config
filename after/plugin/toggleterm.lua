@@ -77,8 +77,9 @@ function _gitui_toggle()
 end
 
 function _spt_toggle()
-	gitui:toggle()
+	spt:toggle()
 end
+
 vim.api.nvim_set_keymap("n", "<leader>tlg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>tg", "<cmd>lua _gitui_toggle()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ts", "<cmd>lua _spt_toggle()<CR>", { noremap = true, silent = true })

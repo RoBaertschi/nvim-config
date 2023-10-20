@@ -1,3 +1,5 @@
+require("rose-pine").setup({ disable_background = true })
+
 function Color(color)
 	color = color or "rose-pine-moon"
 	vim.cmd.colorscheme(color)
@@ -6,7 +8,7 @@ function Color(color)
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 	if vim.fn.exists("g:neovide") then
-		vim.g.neovide_transparency = 0
+		vim.g.neovide_transparency = 0.5
 		vim.o.guifont = "JetBrainsMonoNL NF"
 	end
 end
