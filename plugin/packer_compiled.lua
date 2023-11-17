@@ -169,6 +169,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dev-container"] = {
+    loaded = true,
+    path = "/home/robin/.local/share/nvim/site/pack/packer/start/nvim-dev-container",
+    url = "https://codeberg.org/esensar/nvim-dev-container"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
