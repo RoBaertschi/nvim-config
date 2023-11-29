@@ -209,6 +209,11 @@ _G.packer_plugins = {
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
     url = "https://github.com/anuvyklack/pretty-fold.nvim"
   },
+  ["quick-scope"] = {
+    loaded = true,
+    path = "/home/robin/.local/share/nvim/site/pack/packer/start/quick-scope",
+    url = "https://github.com/unblevable/quick-scope"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/rose-pine",

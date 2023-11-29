@@ -80,5 +80,7 @@ return require("packer").startup(function(use)
 
 	use({ "Civitasv/cmake-tools.nvim" })
 
+	use({ "unblevable/quick-scope" })
+
 	use({ os.getenv("HOME") .. "/dev/nvim_plugins/RoPlugin" })
 end)
