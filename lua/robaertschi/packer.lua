@@ -82,5 +82,5 @@ return require("packer").startup(function(use)
 
 	use({ "unblevable/quick-scope" })
 
-	use({ os.getenv("HOME") .. "/dev/nvim_plugins/RoPlugin" })
+	use({ os.getenv("HOME") .. "/nvim_plugins/projector" })
 end)

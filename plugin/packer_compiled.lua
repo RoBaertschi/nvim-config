@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/robin/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/home/robin/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/home/robin/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/home/robin/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/robin/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/home/robin/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?.lua;/home/robin/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?/init.lua;/home/robin/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?.lua;/home/robin/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/robin/.cache/nvim/packer_hererocks/2.1.1700008891/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -78,11 +78,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  RoPlugin = {
-    loaded = true,
-    path = "/home/robin/.local/share/nvim/site/pack/packer/start/RoPlugin",
-    url = "https://github.com//home/robin/dev/nvim_plugins/RoPlugin"
   },
   ["autoclose.nvim"] = {
     loaded = true,
@@ -208,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
     url = "https://github.com/anuvyklack/pretty-fold.nvim"
+  },
+  projector = {
+    loaded = true,
+    path = "/home/robin/.local/share/nvim/site/pack/packer/start/projector",
+    url = "/home/robin/nvim_plugins/projector"
   },
   ["quick-scope"] = {
     loaded = true,
