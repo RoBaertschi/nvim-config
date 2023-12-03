@@ -84,4 +84,6 @@ return require("packer").startup(function(use)
 	use({ "unblevable/quick-scope" })
 
 	use({ "RoBaertschi/projector" })
+
+	use({ "nvim-orgmode/orgmode" })
 end)

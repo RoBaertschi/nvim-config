@@ -50,6 +50,7 @@ require("null-ls").setup({
 require("cmp").setup({
 	sources = {
 		{ name = "nvim_lua" },
+		{ name = "orgmode" },
 	},
 })
 

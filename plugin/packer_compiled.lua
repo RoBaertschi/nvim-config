@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  orgmode = {
+    loaded = true,
+    path = "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\orgmode",
+    url = "https://github.com/nvim-orgmode/orgmode"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\rtmba\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
