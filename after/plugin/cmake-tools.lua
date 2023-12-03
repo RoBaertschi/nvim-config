@@ -1,4 +1,4 @@
-require("cmake-tools").setup({
+--[[require("cmake-tools").setup({
 	cmake_build_directory = "build/${variant:buildType}",
 	cmake_command = "cmake", -- this is used to specify cmake command path
 	cmake_regenerate_on_save = true, -- auto generate when save CMakeLists.txt
@@ -8,8 +8,8 @@ require("cmake-tools").setup({
 	--       ${kit}
 	--       ${kitGenerator}
 	--       ${variant:xx}
-	cmake_soft_link_compile_commands = false, -- this will automatically make a soft link from compile commands file to project root dir
-	cmake_compile_commands_from_lsp = true, -- this will automatically set compile commands file location using lsp, to use it, please set `cmake_soft_link_compile_commands` to false
+	cmake_soft_link_compile_commands = true, -- this will automatically make a soft link from compile commands file to project root dir
+	cmake_compile_commands_from_lsp = false, -- this will automatically set compile commands file location using lsp, to use it, please set `cmake_soft_link_compile_commands` to false
 	cmake_kits_path = nil, -- this is used to specify global cmake kits path, see CMakeKits for detailed usage
 	cmake_variants_message = {
 		short = { show = true }, -- whether to show short message
@@ -64,4 +64,4 @@ require("cmake-tools").setup({
 		spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }, -- icons used for progress display
 		refresh_rate_ms = 100, -- how often to iterate icons
 	},
-})
+})]]

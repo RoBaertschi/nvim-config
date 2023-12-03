@@ -78,9 +78,10 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use({ "Civitasv/cmake-tools.nvim" })
+	-- use({ "Civitasv/cmake-tools.nvim" })
+	use({ "Shatur/neovim-tasks" })
 
 	use({ "unblevable/quick-scope" })
 
-	use({ os.getenv("HOME") .. "/nvim_plugins/projector" })
+	use({ "RoBaertschi/projector" })
 end)
